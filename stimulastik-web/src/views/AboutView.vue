@@ -31,9 +31,14 @@ import photo from '@/assets/karina.jpg'
   max-width: 320px;
   width: 100%;
   height: auto;
-  border-radius: 5.5rem;
+  border-radius: 2.5rem;
   box-shadow: 0 2px 12px rgba(44, 64, 45, 0.1);
   object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.about-photo:hover {
+  transform: scale(1.06);
 }
 
 .info-card-row {
@@ -48,7 +53,7 @@ import photo from '@/assets/karina.jpg'
   .about-photo {
     max-width: 200px;
     margin: 1.2rem auto 1.2rem auto;
-    border-radius: 3rem;
+    border-radius: 1.5rem;
   }
   .info-card-row {
     flex-direction: column;
