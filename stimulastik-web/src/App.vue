@@ -6,6 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <div class="app-layout">
     <nav class="navbar">
       <RouterLink to="/">Hjem</RouterLink>
+      <RouterLink to="/stimulastik">Stimulastik</RouterLink>
       <RouterLink to="/about">Information</RouterLink>
       <img src="@/assets/logo.png" alt="Logo" class="navbar-logo" />
     </nav>
@@ -117,8 +118,11 @@ import { RouterLink, RouterView } from 'vue-router'
   .navbar a {
     margin-right: 0;
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     padding: 0.5rem 0.8rem;
+  }
+  .navbar-logo {
+    height: 28px;
   }
   .main-content {
     padding-bottom: 0.5rem;

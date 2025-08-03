@@ -10,6 +10,22 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: '/stimulastik',
+      name: 'stimulastik',
+      // route level code-splitting
+      // this generates a separate chunk (Stimulastik.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/StimulastikView.vue'),
+    },
+    {
+      path: '/booking',
+      name: 'booking',
+      // route level code-splitting
+      // this generates a separate chunk (Booking.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/BookingView.vue'),
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

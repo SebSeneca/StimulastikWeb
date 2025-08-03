@@ -1,5 +1,5 @@
 <template>
-  <div class="image-info-card">
+  <div class="image-info-card" @click="handleClick">
     <img :src="imgSrc" :alt="imgAlt" class="image-info-card__image" />
     <InfoCard style="background-color: var(--stimulastik-tertiary)">
       <slot />
@@ -10,10 +10,16 @@
 <script setup lang="ts">
 import InfoCard from './InfoCard.vue'
 
+const emit = defineEmits(['click'])
+
 defineProps<{
   imgSrc: string
   imgAlt: string
 }>()
+
+function handleClick() {
+  emit('click')
+}
 </script>
 
 <style scoped>
@@ -38,6 +44,7 @@ defineProps<{
 .image-info-card:hover {
   box-shadow: 0 6px 24px rgba(44, 64, 45, 0.18);
   border-color: var(--stimulastik-secondary, #2e402d);
+  cursor: pointer;
 }
 
 .image-info-card__image {
