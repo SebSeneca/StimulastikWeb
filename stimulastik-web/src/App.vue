@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <nav class="navbar">
       <RouterLink to="/">Hjem</RouterLink>
       <RouterLink to="/stimulastik">Stimulastik</RouterLink>
-      <RouterLink to="/about">Information</RouterLink>
+      <RouterLink to="/about">Om mig</RouterLink>
       <img src="@/assets/logo.png" alt="Logo" class="navbar-logo" />
     </nav>
     <main class="main-content">
