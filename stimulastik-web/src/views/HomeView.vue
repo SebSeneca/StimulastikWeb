@@ -1,47 +1,37 @@
 <template>
   <div class="home">
-    <div class="home-card">
-      <h1>Welcome to Stimulastik</h1>
-      <p>Discover activities, inspiration, and more for your journey.</p>
-    </div>
+    <h1 class="home-title">Stimulastik v. Karina Jensen</h1>
+    <InfoCard>
+      <p>
+        Udforsk hvordan du kan stimulere dit barn igennem en række lege og øvelser, som nemt kan
+        udføres derhjemme
+      </p>
+    </InfoCard>
   </div>
 </template>
 
+<script setup lang="ts">
+import InfoCard from '@/components/InfoCard.vue'
+</script>
+
 <style scoped>
 .home {
-  min-height: 100vh;
+  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-}
-
-.home-card {
-  background: #fff;
-  padding: 3rem 2.5rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 8px 32px rgba(60, 72, 100, 0.15);
-  text-align: center;
-  max-width: 420px;
+  justify-content: flex-start;
   width: 100%;
-  transition: box-shadow 0.2s;
+  height: 100%;
+  padding-top: 3rem;
 }
 
-.home-card:hover {
-  box-shadow: 0 12px 40px rgba(60, 72, 100, 0.22);
-}
-
-.home-card h1 {
+.home-title {
   font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  color: #3730a3;
+  margin-bottom: 2rem;
+  color: var(--stimulastik-secondary);
   letter-spacing: -1px;
-}
-
-.home-card p {
-  font-size: 1.15rem;
-  color: #64748b;
+  text-align: center;
 }
 </style>
