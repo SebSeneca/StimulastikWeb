@@ -5,7 +5,7 @@
       Stimulastik er et ergoterapeutisk koncept, som handler om stimulation og gymnastik for
       spædbørn og deres forældre.
     </h2>
-    <h2 class="home-subheader" style="margin-bottom: 1rem">
+    <h2 class="home-subheader">
       Stimulastik foregår på små hold, hvor forældre er aktive sammen med deres børn.
     </h2>
     <ImageInfoCard :imgSrc="photo1" imgAlt="Lege og øvelser" :mirrored="false">
@@ -35,5 +35,16 @@ import photo3 from '@/assets/photo3.jpg'
   font-weight: 500;
   color: var(--stimulastik-secondary);
   text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .home-subheader {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--stimulastik-secondary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
 }
 </style>

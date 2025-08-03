@@ -46,7 +46,9 @@ h6 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .base-title {
@@ -56,4 +58,10 @@ h6 {
   color: var(--stimulastik-secondary);
   letter-spacing: -1px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .base-title {
+    font-size: 1.7rem;
+  }
 }

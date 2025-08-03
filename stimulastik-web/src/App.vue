@@ -13,9 +13,9 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterView />
     </main>
     <footer class="footer">
-      <span>© 2025 Stimulastik v. Karina Jensen</span>
+      <span>© 2024 Stimulastik v. Karina Jensen</span>
       <span>
-        Hjemmeside udviklet og vedligeholdt af
+        Hjemmeside udviklet af
         <a
           href="https://www.linkedin.com/in/sebastian-hansen-2303051a1/"
           target="_blank"
@@ -34,10 +34,13 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  height: 100vh;
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--stimulastik-secondary);
   height: 60px;
   flex-shrink: 0;
   background: var(--stimulastik-primary);
@@ -53,7 +56,6 @@ import { RouterLink, RouterView } from 'vue-router'
   margin-right: 2rem;
   font-size: 1rem;
   font-weight: 500;
-  font-style: normal;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   transition:
@@ -76,19 +78,17 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 .main-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 0;
-  min-height: 0;
+  flex: 1 0 auto;
   overflow: auto;
-  padding-bottom: 1rem; /* Optional: for spacing below content */
+  padding-bottom: 1rem;
 }
+
 .footer {
+  flex-shrink: 0;
   height: 48px;
   width: 100%;
-  flex-shrink: 0;
-  background: var(--stimulastik-tertiary);
-  color: #fff;
+  background: var(--stimulastik-primary);
+  color: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -104,5 +104,32 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 .linkedin-link:hover {
   color: #0a66c2;
+}
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    height: auto;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+  .navbar a {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .main-content {
+    padding-bottom: 0.5rem;
+  }
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    gap: 0.3rem;
+    text-align: center;
+  }
 }
 </style>
