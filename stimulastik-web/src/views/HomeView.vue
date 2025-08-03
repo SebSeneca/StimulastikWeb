@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="base-view">
     <h1 class="home-title">Stimulastik v. Karina Jensen</h1>
     <InfoCard>
       <p>
@@ -15,17 +15,6 @@ import InfoCard from '@/components/InfoCard.vue'
 </script>
 
 <style scoped>
-.home {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  padding-top: 3rem;
-}
-
 .home-title {
   font-size: 2.2rem;
   font-weight: 700;

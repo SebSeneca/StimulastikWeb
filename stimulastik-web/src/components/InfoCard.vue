@@ -15,5 +15,8 @@
   text-align: center;
   max-width: 420px;
   width: 100%;
+  max-height: 350px;
+  height: 100%;
+  overflow: hidden;
 }
 </style>

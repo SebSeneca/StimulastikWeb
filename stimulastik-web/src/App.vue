@@ -11,6 +11,20 @@ import { RouterLink, RouterView } from 'vue-router'
     <main class="main-content">
       <RouterView />
     </main>
+    <footer class="footer">
+      <span>© 2025 Stimulastik v. Karina Jensen</span>
+      <span>
+        Hjemmeside udviklet og vedligeholdt af
+        <a
+          href="https://www.linkedin.com/in/sebastian-hansen-2303051a1/"
+          target="_blank"
+          rel="noopener"
+          class="linkedin-link"
+        >
+          Sebastian Hansen
+        </a>
+      </span>
+    </footer>
   </div>
 </template>
 
@@ -57,5 +71,26 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   width: 100%;
   height: 100%;
+}
+
+.footer {
+  height: 48px;
+  background: var(--stimulastik-primary);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.linkedin-link {
+  color: inherit;
+  text-decoration: underline;
+}
+.linkedin-link:hover {
+  color: #0a66c2;
 }
 </style>
