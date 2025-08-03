@@ -1,6 +1,6 @@
 <template>
   <div class="base-view">
-    <h1>Information</h1>
+    <h1 class="base-title">Information</h1>
     <div class="info-card-row">
       <InfoCard>
         <p>

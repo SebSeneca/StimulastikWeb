@@ -7,6 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <nav class="navbar">
       <RouterLink to="/">Hjem</RouterLink>
       <RouterLink to="/about">Information</RouterLink>
+      <img src="@/assets/logo.png" alt="Logo" class="navbar-logo" />
     </nav>
     <main class="main-content">
       <RouterView />
@@ -38,6 +39,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 .navbar {
   height: 60px;
+  flex-shrink: 0;
   background: var(--stimulastik-primary);
   color: #fff;
   display: flex;
@@ -66,17 +68,27 @@ import { RouterLink, RouterView } from 'vue-router'
   box-shadow: 0 2px 12px 0 rgba(108, 149, 104, 0.15);
 }
 
-.main-content {
-  flex: 1;
-  display: flex;
-  width: 100%;
-  height: 100%;
+.navbar-logo {
+  margin-left: auto;
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow: auto;
+  padding-bottom: 1rem; /* Optional: for spacing below content */
+}
 .footer {
   height: 48px;
-  background: var(--stimulastik-primary);
-  color: var(--color-text);
+  width: 100%;
+  flex-shrink: 0;
+  background: var(--stimulastik-tertiary);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;

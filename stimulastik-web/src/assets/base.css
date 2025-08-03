@@ -46,7 +46,14 @@ h6 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  padding-top: 3rem;
+  padding-top: 2rem;
+}
+
+.base-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--stimulastik-secondary);
+  letter-spacing: -1px;
+  text-align: center;
 }

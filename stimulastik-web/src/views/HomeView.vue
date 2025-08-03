@@ -1,26 +1,39 @@
 <template>
   <div class="base-view">
-    <h1 class="home-title">Stimulastik v. Karina Jensen</h1>
-    <InfoCard>
-      <p>
-        Udforsk hvordan du kan stimulere dit barn igennem en række lege og øvelser, som nemt kan
-        udføres derhjemme
-      </p>
-    </InfoCard>
+    <h1 class="base-title">Stimulastik v. Karina Jensen</h1>
+    <h2 class="home-subheader">
+      Stimulastik er et ergoterapeutisk koncept, som handler om stimulation og gymnastik for
+      spædbørn og deres forældre.
+    </h2>
+    <h2 class="home-subheader" style="margin-bottom: 1rem">
+      Stimulastik foregår på små hold, hvor forældre er aktive sammen med deres børn.
+    </h2>
+    <ImageInfoCard :imgSrc="photo1" imgAlt="Lege og øvelser" :mirrored="false">
+      <p>Leg og bevægelse styrker barnets motorik og sociale færdigheder.</p>
+    </ImageInfoCard>
+    <ImageInfoCard :imgSrc="photo2" imgAlt="Sanseudvikling" :mirrored="true">
+      <p>Sanselege hjælper børn med at udforske verden og udvikle nye kompetencer.</p>
+    </ImageInfoCard>
+    <ImageInfoCard :imgSrc="photo3" imgAlt="Kreativitet" :mirrored="false">
+      <p>Kreative aktiviteter fremmer fantasi og problemløsning hos børn.</p>
+    </ImageInfoCard>
   </div>
 </template>
 
 <script setup lang="ts">
-import InfoCard from '@/components/InfoCard.vue'
+import ImageInfoCard from '@/components/ImageInfoCard.vue'
+
+// Import images using Vite's asset handling
+import photo1 from '@/assets/photo1.jpg'
+import photo2 from '@/assets/photo2.jpg'
+import photo3 from '@/assets/photo3.jpg'
 </script>
 
 <style scoped>
-.home-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+.home-subheader {
+  font-size: 1.5rem;
+  font-weight: 500;
   color: var(--stimulastik-secondary);
-  letter-spacing: -1px;
   text-align: center;
 }
 </style>
