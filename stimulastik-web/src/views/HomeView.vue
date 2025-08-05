@@ -1,5 +1,5 @@
 <template>
-  <div class="base-view" style="padding-left: 0; padding-right: 0">
+  <div class="base-view">
     <h1 class="base-title">Stimulastik v. Karina Jensen</h1>
     <h2 class="base-subheader">
       Stimulastik er et ergoterapeutisk koncept, som handler om stimulation og gymnastik for

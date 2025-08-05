@@ -30,10 +30,11 @@ defineProps<{
   display: flex;
   align-items: stretch;
   width: 100%;
+  max-width: 1000px;
   min-height: 280px;
   max-height: 360px;
   height: 360px;
-  margin: 2.5rem 0;
+  margin: 1.5rem 0;
   overflow: hidden;
   flex-direction: row;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="base-view">
+  <div class="base-view" style="padding-left: 1rem; padding-right: 1rem; padding-bottom: 1rem">
     <h1 class="base-title">Book private sessioner</h1>
     <p class="info-text">
       Kunne i tænke jer at booke en stimulastik session til jeres næste mødregruppe? Eller har I et
