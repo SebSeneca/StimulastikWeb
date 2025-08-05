@@ -22,6 +22,7 @@
       header="Tilmeld dig til hold hos Idalou"
       body="Kom ned til Idalous familieunivers og deltag i mit stimulastik hold. Tilmelding og kalender findes på Idalous hjemmeside."
       buttonText="Tilmeld"
+      :mirror="true"
       @buttonClick="handleIdalouClick"
     />
     <InfoSection
