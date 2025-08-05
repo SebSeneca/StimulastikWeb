@@ -1,13 +1,23 @@
 <template>
   <div class="base-view">
-    <h1 class="base-title">Book en privat session</h1>
+    <h1 class="base-title">Book private sessioner</h1>
     <p class="info-text">
       Kunne i tænke jer at booke en stimulastik session til jeres næste mødregruppe? Eller har I et
       ønske om at få en privat session i jeres eget hjem?
     </p>
     <p class="info-text">
-      Udfyld formularen nedenfor for at sende en forespørgsel. Skriv jeres navn, emne, jeres e-mail
-      samt en besked med jeres ønsker eller spørgsmål.
+      Tag kontakt og så aftaler vi sammen hvor mange sessioner forløbet skal bestå af samt hvor og
+      hvornår sessionerne vil finde sted.
+    </p>
+    <p class="info-text">
+      Et typisk forløb består af 6 sessioner, som finder sted hver eller hveranden uge. Det vil være
+      tirsdag eftermiddag eller i weekenderne i et af jeres hjem. Der skal være 3-7 babyer i gruppen
+      i alderen 2-12 måneder.
+    </p>
+    <p class="info-text">Prisen tilpasses antallet af babyer og hvor sessionerne finder sted.</p>
+    <p class="info-text">
+      Skriv til mig for at høre mere. Jeg glæder mig til at høre fra jer og lege med jer og jeres
+      babyer!
     </p>
     <form class="booking-form" @submit.prevent="handleSubmit">
       <label>

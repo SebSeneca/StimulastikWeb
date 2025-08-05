@@ -1,5 +1,5 @@
 <template>
-  <div class="base-view">
+  <div class="base-view" style="padding-left: 0; padding-right: 0">
     <h1 class="base-title">Stimulastik v. Karina Jensen</h1>
     <h2 class="home-subheader">
       Stimulastik er et ergoterapeutisk koncept, som handler om stimulation og gymnastik for
@@ -8,20 +8,35 @@
     <h2 class="home-subheader">
       Stimulastik foregår på små hold, hvor forældre er aktive sammen med deres børn.
     </h2>
-    <ImageInfoCard :imgSrc="photo2" imgAlt="Lege og øvelser" @click="handleBookingClick">
-      <p>Book en privat session</p>
-    </ImageInfoCard>
-    <ImageInfoCard :imgSrc="idalouLogo" imgAlt="Idalou" @click="handleIdalouClick">
-      <p>Tilmeld dig til hold hos Idalou.</p>
-    </ImageInfoCard>
-    <ImageInfoCard :imgSrc="photo1" imgAlt="Kreativitet" @click="handleStimulastikClick">
-      <p>Lær mere om fordelene ved stimulastik.</p>
-    </ImageInfoCard>
+    <InfoSection
+      :imgSrc="photo2"
+      imgAlt="Lege og øvelser"
+      header="Book en privat session"
+      body="Ved booking af en privat session får du og din mødregruppe mulighed for et special tilpasset forløb, som opfylder jeres behov og ønsker inden for børnenes nærmeste udviklingszone. "
+      buttonText="Kontakt mig for booking"
+      @buttonClick="handleBookingClick"
+    />
+    <InfoSection
+      :imgSrc="idalouLogo"
+      imgAlt="Idalou"
+      header="Tilmeld dig til hold hos Idalou"
+      body="Kom ned til Idalous familieunivers og deltag i mit stimulastik hold. Tilmelding og kalender findes på Idalous hjemmeside."
+      buttonText="Tilmeld"
+      @buttonClick="handleIdalouClick"
+    />
+    <InfoSection
+      :imgSrc="photo1"
+      imgAlt="Kreativitet"
+      header="Lær mere om fordelene ved stimulastik"
+      body="Kreative aktiviteter fremmer fantasi og problemløsning hos børn."
+      buttonText="Læs mere"
+      @buttonClick="handleStimulastikClick"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import ImageInfoCard from '@/components/ImageInfoCard.vue'
+import InfoSection from '@/components/InfoSection.vue'
 import { useRouter } from 'vue-router'
 
 // Import images using Vite's asset handling
