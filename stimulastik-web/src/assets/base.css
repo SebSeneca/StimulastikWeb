@@ -60,8 +60,23 @@ h6 {
   text-align: center;
 }
 
+.base-subheader {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--stimulastik-secondary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 @media (max-width: 600px) {
   .base-title {
     font-size: 1.7rem;
+  }
+  .base-subheader {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--stimulastik-secondary);
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 }

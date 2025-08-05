@@ -1,11 +1,11 @@
 <template>
   <div class="base-view" style="padding-left: 0; padding-right: 0">
     <h1 class="base-title">Stimulastik v. Karina Jensen</h1>
-    <h2 class="home-subheader">
+    <h2 class="base-subheader">
       Stimulastik er et ergoterapeutisk koncept, som handler om stimulation og gymnastik for
       spædbørn og deres forældre.
     </h2>
-    <h2 class="home-subheader">
+    <h2 class="base-subheader">
       Stimulastik foregår på små hold, hvor forældre er aktive sammen med deres børn.
     </h2>
     <InfoSection
@@ -29,7 +29,7 @@
       :imgSrc="photo1"
       imgAlt="Kreativitet"
       header="Lær mere om fordelene ved stimulastik"
-      body="Kreative aktiviteter fremmer fantasi og problemløsning hos børn."
+      body="Hvis du er nysgerrig og gerne vil vide mere, kan du her læse lidt om stimulastik, og hvordan det kan gavne dig og dit barn."
       buttonText="Læs mere"
       @buttonClick="handleStimulastikClick"
     />
@@ -60,22 +60,4 @@ function handleStimulastikClick() {
 }
 </script>
 
-<style scoped>
-.home-subheader {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--stimulastik-secondary);
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-@media (max-width: 600px) {
-  .home-subheader {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--stimulastik-secondary);
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-}
-</style>
+<style scoped></style>

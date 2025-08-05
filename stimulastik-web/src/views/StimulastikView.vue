@@ -1,6 +1,9 @@
 <template>
   <div class="base-view" style="padding-left: 0; padding-right: 0">
     <h1 class="base-title">Hvad er stimulastik?</h1>
+    <h2 class="base-subheader">
+      Læs lidt om stimulastik og hvad det kan gøre for dig og dit barn.
+    </h2>
     <InfoSection
       :imgSrc="photo3"
       imgAlt="Baby der leger"
