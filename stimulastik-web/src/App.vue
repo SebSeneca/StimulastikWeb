@@ -1,6 +1,52 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { ref, watch } from 'vue'
 // QR CODE generated from https://www.qrcode-monkey.com/#
+const route = useRoute()
+const transitionName = ref('fade')
+const logoAnimated = ref(false)
+
+// Watch for route changes
+watch(
+  () => route.path,
+  (to, from) => {
+    if (to === from) return
+
+    // Home
+    if (to === '/') {
+      transitionName.value = 'slide-left'
+    } else if (from === '/') {
+      transitionName.value = 'slide-right'
+    }
+
+    // About
+    if (to === '/about') {
+      transitionName.value = 'slide-right'
+    } else if (from === '/about') {
+      transitionName.value = 'slide-left'
+    }
+
+    // Stimulastik
+    if (to === '/stimulastik' && from === '/') {
+      transitionName.value = 'slide-right'
+    } else if (to === '/stimulastik' && from === '/about') {
+      transitionName.value = 'slide-left'
+    } else if (from === '/stimulastik' && to === '/about') {
+      transitionName.value = 'slide-right'
+    } else if (from === '/stimulastik' && to === '/') {
+      transitionName.value = 'slide-left'
+    }
+  },
+)
+
+function animateLogo() {
+  void document.getElementById('navbar-logo')?.offsetWidth
+  logoAnimated.value = true
+}
+
+function handleLogoAnimationEnd() {
+  logoAnimated.value = false
+}
 </script>
 
 <template>
@@ -9,13 +55,24 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/">Hjem</RouterLink>
       <RouterLink to="/stimulastik">Om stimulastik</RouterLink>
       <RouterLink to="/about">Om mig</RouterLink>
-      <img src="@/assets/logo.png" alt="Logo" class="navbar-logo" />
+      <img
+        src="@/assets/logo.png"
+        alt="Logo"
+        class="navbar-logo"
+        :class="{ 'animate__animated animate__hinge': logoAnimated }"
+        @click="animateLogo"
+        @animationend="handleLogoAnimationEnd"
+      />
     </nav>
     <main class="main-content">
-      <RouterView />
+      <RouterView v-slot="{ Component }">
+        <Transition :name="transitionName" mode="out-in">
+          <Component :is="Component" />
+        </Transition>
+      </RouterView>
     </main>
     <footer class="footer">
-      <span>© 2024 Stimulastik v. Karina Jensen</span>
+      <span>© 2025 Stimulastik v. Karina Jensen</span>
       <span>
         Hjemmeside udviklet af
         <a
@@ -36,6 +93,38 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+/* Slide Left */
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition:
+    transform 0.2s cubic-bezier(0.55, 0, 0.1, 1),
+    opacity 0.2s;
+}
+.slide-left-enter-from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.slide-left-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Slide Right */
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition:
+    transform 0.2s cubic-bezier(0.55, 0, 0.1, 1),
+    opacity 0.2s;
+}
+.slide-right-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.slide-right-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
 .navbar {
@@ -88,8 +177,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
 .main-content {
   flex: 1 0 auto;
-  overflow: auto;
   padding-bottom: 1rem;
+  overflow: hidden;
 }
 
 .footer {
@@ -142,6 +231,14 @@ import { RouterLink, RouterView } from 'vue-router'
     font-size: 0.9rem;
     gap: 0.3rem;
     text-align: center;
+  }
+  .slide-left-enter-active,
+  .slide-left-leave-active,
+  .slide-right-enter-active,
+  .slide-right-leave-active {
+    transition:
+      transform 0.07s cubic-bezier(0.55, 0, 0.1, 1),
+      opacity 0.07s;
   }
 }
 </style>

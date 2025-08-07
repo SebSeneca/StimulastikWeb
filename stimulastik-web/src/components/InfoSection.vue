@@ -1,5 +1,8 @@
 <template>
-  <section class="info-section" :class="{ 'info-section--mirrored': mirror }">
+  <section
+    class="info-section animate__animated animate__fadeIn"
+    :class="{ 'info-section--mirrored': mirror }"
+  >
     <img :src="imgSrc" :alt="imgAlt" class="info-section-image" />
     <div class="info-section-content">
       <h2 class="info-section-header">{{ header }}</h2>

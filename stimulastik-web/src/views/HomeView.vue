@@ -1,11 +1,14 @@
 <template>
   <div class="base-view">
-    <h1 class="base-title">Velkommen til Stimulastik v. Karina Jensen.</h1>
+    <h1 class="base-title animate__animated animate__fadeInDown" style="animation-duration: 0.7s">
+      Velkommen til Stimulastik v. Karina Jensen
+    </h1>
     <h2 class="base-subheader">
       Til dig, som har en baby på 2-12 måneder og som har lyst til at få inspiration og ideer til
       hvordan du kan stimulere din babys basale sanser.
     </h2>
     <InfoSection
+      style="animation-delay: 0.1s; animation-duration: 0.5s"
       :imgSrc="photo2"
       imgAlt="Lege og øvelser"
       header="Book en privat session"
@@ -14,6 +17,7 @@
       @buttonClick="handleBookingClick"
     />
     <InfoSection
+      style="animation-delay: 0.2s; animation-duration: 0.5s"
       :imgSrc="idalouLogo"
       imgAlt="Idalou"
       header="Tilmeld dig til hold hos Idalou"
@@ -23,6 +27,7 @@
       @buttonClick="handleIdalouClick"
     />
     <InfoSection
+      style="animation-delay: 0.3s; animation-duration: 0.5s"
       :imgSrc="photo1"
       imgAlt="Kreativitet"
       header="Lær mere om fordelene ved stimulastik"

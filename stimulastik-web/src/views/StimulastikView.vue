@@ -1,16 +1,20 @@
 <template>
   <div class="base-view">
-    <h1 class="base-title">Hvad er stimulastik?</h1>
+    <h1 class="base-title animate__animated animate__fadeInDown" style="animation-duration: 0.7s">
+      Hvad er stimulastik?
+    </h1>
     <h2 class="base-subheader">
       Læs lidt om stimulastik og hvad det kan gøre for dig og dit barn.
     </h2>
     <InfoSection
+      style="animation-delay: 0.1s; animation-duration: 0.5s"
       :imgSrc="photo3"
       imgAlt="Baby der leger"
       header="Ergoterapi"
       body="Stimulastik er et ergoterapeutisk koncept, som handler om stimulation og gymnastik for spædbørn og deres forældre. Stimulastik foregår på små hold, hvor forældre er aktive sammen med deres børn."
     />
     <InfoSection
+      style="animation-delay: 0.2s; animation-duration: 0.5s"
       :imgSrc="photo4"
       imgAlt="Barn med legetøj"
       header="Inspiration"
@@ -18,6 +22,7 @@
       :mirror="true"
     />
     <InfoSection
+      style="animation-delay: 0.3s"
       :imgSrc="photo5"
       imgAlt="Mor med barn"
       header="Udvikling"

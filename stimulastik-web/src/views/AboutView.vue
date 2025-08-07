@@ -1,7 +1,13 @@
 <template>
   <div class="base-view about-view">
-    <h1 class="base-title" style="margin-bottom: 0">Om mig</h1>
+    <h1
+      class="base-title animate__animated animate__fadeInDown"
+      style="margin-bottom: 0; animation-duration: 0.7s"
+    >
+      Om mig
+    </h1>
     <InfoSection
+      style="animation-delay: 0.1s; animation-duration: 0.5s"
       :imgSrc="photo"
       imgAlt="Karina Jensen"
       header="Mit navn er Karina Jensen"
