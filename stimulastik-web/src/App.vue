@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+// QR CODE generated from https://www.qrcode-monkey.com/#
 </script>
 
 <template>
