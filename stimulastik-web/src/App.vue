@@ -237,8 +237,8 @@ function handleLogoAnimationEnd() {
   .slide-right-enter-active,
   .slide-right-leave-active {
     transition:
-      transform 0.07s cubic-bezier(0.55, 0, 0.1, 1),
-      opacity 0.07s;
+      transform 0.09s cubic-bezier(0.55, 0, 0.1, 1),
+      opacity 0.09s;
   }
 }
 </style>
