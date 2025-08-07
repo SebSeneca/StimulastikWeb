@@ -2,12 +2,13 @@
   <div class="base-view" style="padding-left: 1rem; padding-right: 1rem; padding-bottom: 1rem">
     <h1 class="base-title">Book private sessioner</h1>
     <p class="info-text">
-      Kunne i tænke jer at booke en stimulastik session til jeres næste mødregruppe? Eller har I et
-      ønske om at få en privat session i jeres eget hjem?
+      Kunne i tænke jer at booke en stimulastik session til jeres næste mødregruppe? Har I et ønske
+      om at få en privat session i jeres eget hjem? Eller har i spørgsmål til mig?
     </p>
     <p class="info-text">
-      Tag kontakt og så aftaler vi sammen hvor mange sessioner forløbet skal bestå af samt hvor og
-      hvornår sessionerne vil finde sted.
+      Tag kontakt, så vender jeg tilbage til jer hurtigst muligt. Hvis i ønsker private sessioner,
+      kan vi sammen aftale hvor mange sessioner forløbet skal bestå af, samt hvor og hvornår
+      sessionerne vil finde sted.
     </p>
     <p class="info-text">
       Et typisk forløb består af 6 sessioner, som finder sted hver eller hveranden uge. Det vil være

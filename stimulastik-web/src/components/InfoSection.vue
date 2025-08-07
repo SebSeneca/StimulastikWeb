@@ -4,7 +4,7 @@
     <div class="info-section-content">
       <h2 class="info-section-header">{{ header }}</h2>
       <div class="info-section-body-wrapper">
-        <p class="info-section-body">{{ body }}</p>
+        <p class="info-section-body" v-html="body"></p>
       </div>
       <button v-if="buttonText" class="info-section-button" @click="$emit('buttonClick')">
         {{ buttonText }}

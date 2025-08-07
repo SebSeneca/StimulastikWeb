@@ -42,7 +42,7 @@ import { RouterLink, RouterView } from 'vue-router'
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--stimulastik-secondary);
-  height: 60px;
+  height: 55px;
   flex-shrink: 0;
   background: var(--stimulastik-primary);
   color: #fff;
@@ -65,9 +65,16 @@ import { RouterLink, RouterView } from 'vue-router'
     color 0.2s;
 }
 
+.navbar a:hover {
+  background: var(--stimulastik-tertiary);
+  color: var(--color-white);
+  box-shadow: 0 2px 12px 0 rgba(108, 149, 104, 0.15);
+  text-decoration: none;
+}
+
 .navbar a.router-link-exact-active {
   color: var(--color-white);
-  background: var(--stimulastik-tertiary);
+  background: var(--stimulastik-secondary);
   box-shadow: 0 2px 12px 0 rgba(108, 149, 104, 0.15);
 }
 
@@ -89,6 +96,7 @@ import { RouterLink, RouterView } from 'vue-router'
   height: 48px;
   width: 100%;
   background: var(--stimulastik-primary);
+  border-top: 1px solid var(--stimulastik-secondary);
   color: var(--color-text);
   display: flex;
   align-items: center;
@@ -117,7 +125,6 @@ import { RouterLink, RouterView } from 'vue-router'
   }
   .navbar a {
     margin-right: 0;
-    margin-bottom: 0.5rem;
     font-size: 0.9rem;
     padding: 0.5rem 0.8rem;
   }

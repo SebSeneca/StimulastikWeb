@@ -1,12 +1,9 @@
 <template>
   <div class="base-view">
-    <h1 class="base-title">Stimulastik v. Karina Jensen</h1>
+    <h1 class="base-title">Velkommen til Stimulastik v. Karina Jensen.</h1>
     <h2 class="base-subheader">
-      Stimulastik er et ergoterapeutisk koncept, som handler om stimulation og gymnastik for
-      spædbørn og deres forældre.
-    </h2>
-    <h2 class="base-subheader">
-      Stimulastik foregår på små hold, hvor forældre er aktive sammen med deres børn.
+      Til dig, som har en baby på 2-12 måneder og som har lyst til at få inspiration og ideer til
+      hvordan du kan stimulere din babys basale sanser.
     </h2>
     <InfoSection
       :imgSrc="photo2"

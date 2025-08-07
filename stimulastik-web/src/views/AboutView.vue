@@ -5,15 +5,32 @@
       :imgSrc="photo"
       imgAlt="Karina Jensen"
       header="Mit navn er Karina Jensen"
-      body="Jeg blev i 2020 uddannet ergoterapeut på UCL i Odense og i 2023 certificeret stimulastik instruktør. Jeg arbejder til dagligt som ergoterapeut på Slagelse sygehus og har ved siden af min hobbyvirksomhed med stimulastik. + mere tekst"
+      :body="infoTxt"
       :mirror="true"
+      buttonText="Kontakt mig"
+      @buttonClick="handleBookingClick"
     />
   </div>
 </template>
 
 <script setup lang="ts">
 import InfoSection from '@/components/InfoSection.vue'
+import { useRouter } from 'vue-router'
 import photo from '@/assets/karina.jpg'
+
+const infoTxt =
+  'Jeg hedder Karina Jensen og er 31 år. Jeg arbejder til dagligt som ergoterapeut på Slagelse sygehus' +
+  ' og har ved siden af denne hobby virksomhed med stimulastik.' +
+  '<br><br>Jeg har altid haft en passion for børns sansemotoriske udvikling og da jeg i 2020 selv blev mor ' +
+  'for første gang blev min nysgerrighed kun endnu større. Jeg har derfor efterfølgende nørdet ned i ' +
+  'børns sanser, deres udvikling og særligt hvordan vi så kan stimulere dem.<br><br>' +
+  'I 2023 blev jeg certificeret stimulastik instruktør og har efterfølgende haft en masse dejlige hold.'
+
+const router = useRouter()
+
+function handleBookingClick() {
+  router.push('/booking')
+}
 </script>
 
 <style scoped>
