@@ -146,7 +146,7 @@ function handleLogoAnimationEnd() {
   text-decoration: none;
   margin-right: 2rem;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   transition:
@@ -173,6 +173,7 @@ function handleLogoAnimationEnd() {
   height: 40px;
   width: auto;
   display: block;
+  cursor: pointer;
 }
 
 .main-content {

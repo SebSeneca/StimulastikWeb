@@ -61,6 +61,7 @@ defineProps<{
 }
 .info-section-header {
   font-size: 1.7rem;
+  font-weight: 500;
   margin-bottom: 0.7rem;
   color: var(--stimulastik-secondary);
   font-family: Gabriola, serif;
@@ -70,6 +71,7 @@ defineProps<{
 }
 .info-section-body {
   font-size: 1rem;
+  font-weight: 350;
   margin: 0;
   color: var(--stimulastik-secondary);
 }
@@ -81,7 +83,7 @@ defineProps<{
   padding: 0.6rem 1.4rem;
   margin-top: 1rem;
   font-size: 1rem;
-  font-weight: 350;
+  font-weight: 300;
   font-family: 'Segoe UI', Inter, Arial, sans-serif;
   cursor: pointer;
   transition: background 0.2s;
